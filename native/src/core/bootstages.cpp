@@ -415,6 +415,8 @@ static void boot_complete() {
     // Ensure manager exists
     check_pkg_refresh();
     get_manager(0, nullptr, true);
+
+    reset_zygisk(true);
 }
 
 void boot_stage_handler(int client, int code) {
